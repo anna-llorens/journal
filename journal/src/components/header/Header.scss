@@ -1,0 +1,21 @@
+@import "src/utils";
+.header {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: $space-12;
+  @include box-shadow;
+  .content {
+    display: flex;
+    width: 400px;
+  }
+  .title {
+    text-align: end;
+  }
+  // Hide title small screens
+  @media screen and (max-width: 600px) {
+    .title {
+      display: none;
+    }
+  }
+}

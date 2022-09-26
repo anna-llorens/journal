@@ -1,0 +1,21 @@
+@import "/src/utils";
+.article-info {
+  h5 {
+    @include text-ellipsis(2);
+  }
+  font-weight: bold;
+  line-height: $space-16;
+  .date {
+    margin-top: $space-4;
+    color: $gray-2;
+  }
+  .author {
+    min-height: 14px;
+    color: $gray-3;
+  }
+  .date,
+  .author {
+    @include text-ellipsis;
+    font-size: 10px;
+  }
+}

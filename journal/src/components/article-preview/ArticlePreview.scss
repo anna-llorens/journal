@@ -1,0 +1,41 @@
+@import "/src/utils";
+.article {
+  margin-left: $space-16;
+  width: 80%;
+  &-container {
+    width: 80%;
+    @include display-centered;
+    @include box-container;
+    &:hover {
+      @include box-shadow;
+      cursor: pointer;
+    }
+    .preview {
+      width: 90%;
+      h2 {
+        @include text-ellipsis(4);
+      }
+      .title {
+        display: none;
+      }
+    }
+    .img {
+      height: 300px;
+    }
+    .description {
+      font-weight: bold;
+      margin: $space-8 0;
+    }
+    .read-more {
+      h3 {
+        margin-bottom: $space-8;
+      }
+      @include display-centered;
+    }
+    @media screen and (max-width: 800px) {
+      .img {
+        height: 100px;
+      }
+    }
+  }
+}

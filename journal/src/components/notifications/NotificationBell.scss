@@ -1,0 +1,45 @@
+@import "src/utils";
+.counter {
+  svg {
+    animation: bell-swing 4s;
+    animation-iteration-count: infinite;
+    -webkit-animation: bell-swing 4s;
+    -webkit-animation-iteration-count: infinite;
+  }
+}
+[data-badge] {
+  position: relative;
+  &:after {
+    position: absolute;
+    right: -10px;
+    top: -$space-8;
+    min-width: $space-8;
+    min-height: $space-8;
+    line-height: $space-8;
+    padding: 5px;
+    color: #fff;
+    background-color: $red;
+    font-size: 10px;
+    border-radius: 20px;
+    content: attr(data-badge);
+    border: solid 1px $red;
+  }
+}
+// Bell-swing animation
+@keyframes bell-swing {
+  2% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  4% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  6% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  8% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  10% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
